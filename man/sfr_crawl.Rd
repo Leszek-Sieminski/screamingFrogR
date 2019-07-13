@@ -2,19 +2,86 @@
 % Please edit documentation in R/sfr_crawl.R
 \name{sfr_crawl}
 \alias{sfr_crawl}
-\title{Title}
+\title{Run a SEO crawl with Screaming Frog SEO Crawler and choose what to export}
 \usage{
-sfr_crawl(url, output_folder = NULL, timestamped_output = NULL,
-  format = "csv", save_crawl_file = TRUE, export_tabs = NULL,
-  export_bulk = NULL, export_report = NULL, overwrite = TRUE,
-  headless = TRUE, config = NULL, create_sitemap = NULL,
-  create_images_sitemap = NULL, use_majestic = NULL,
+sfr_crawl(url, output_folder = NULL, timestamped_output = FALSE,
+  export_tabs = NULL, export_bulk = NULL, export_report = NULL,
+  format = "csv", save_crawl_file = FALSE, overwrite = FALSE,
+  headless = TRUE, create_sitemap = FALSE,
+  create_images_sitemap = FALSE, config = NULL, use_majestic = NULL,
   use_mozscape = NULL, use_ahrefs = NULL,
   use_google_analytics = NULL, use_google_search_console = NULL)
 }
 \arguments{
-\item{use_google_search_console}{}
+\item{url}{string or vector of strings. What should Screaming Frog crawl
+Single URL will trigger domain-crawl mode (starting from the provided
+URL); vector of URLs will trigger list-crawl mode - only provided URLs
+will be crawled}
+
+\item{output_folder}{string. The path to folder in which the output reports
+will be stored. If NULL it will create the reports into current working
+directory. Defaults to NULL}
+
+\item{timestamped_output}{logical. Should the output be created in a
+timestamped folder in the output folder? Defaults to FALSE}
+
+\item{export_tabs}{vector of strings. Supply a character vector of tabs and
+filters to export. You need to specify the tab name and the filter name
+based on the names in the Screaming Frog GUI: c(tab:filter, ...).
+Example: c("Internal:All", "External:All"). Defaults to NULL}
+
+\item{export_bulk}{vector of strings. Supply character vector of bulk
+exports to perform. The export names are the same as in the Bulk Export
+menu in the UI. To access exports in a submenu, use
+c(submenu-name:export-name).
+Example: c("All Inlinks", "Directives:Index Inlinks"). Defaults to
+NULL}
+
+\item{export_report}{vector of strings. Supply a character vector of
+reports to save. The report names are the same as in the Report menu in
+the UI. To access reports in a submenu, use c(submenu-name:report-name)
+Example: c("Crawl Overview", "Hreflang:All hreflang URLs"). Defaults to
+NULL}
+
+\item{format}{string. Supply a format to be used for all exports. Available
+options are "csv", "xls" and "xlsx". Defaults to "csv". IMPORTANT:
+it only affects exported tabs, bulk exports and reports, so if you
+decide to save the crawl file, it will not be affected}
+
+\item{save_crawl_file}{logical. Should the files in output directory be
+overwritten? Defaults to FALSE}
+
+\item{overwrite}{logical. Should the files in the output folder be
+overwritten? Defaults to FALSE}
+
+\item{headless}{logical. Should the crawler be run in silent mode without a
+new window with a user interface? Defaults to TRUE}
+
+\item{create_sitemap}{logical. Should the crawler create a sitemap from the
+completed crawl? Defaults to FALSE}
+
+\item{create_images_sitemap}{logical. Should the crareate an images sitemap
+from the completed crawl? Defaults to FALSE}
+
+\item{config}{string. Supply a path to config file for the spider to use.
+If NULL, crawler will use the default configuration. Defaults to NULL}
+
+\item{use_majestic}{??? Use Majestic API during crawl}
+
+\item{use_mozscape}{??? Use Mozscape API during crawl}
+
+\item{use_ahrefs}{??? Use Ahrefs API during crawl}
+
+\item{use_google_analytics}{??? Use Google Analytics API during crawl}
+
+\item{use_google_search_console}{??? Use Google Search Console API during
+crawl}
+}
+\value{
+spreadsheet files in choosen directory with the reports and/or the
+   crawl file itself
 }
 \description{
-Title
+Function is a wrapper to Screaming Frog CLI program in
+    versions 10+. It lets performing SEO crawl and exporting results.
 }
