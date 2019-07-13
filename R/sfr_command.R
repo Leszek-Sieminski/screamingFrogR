@@ -74,8 +74,14 @@ sfr_command <- function(
 {
   # commands preparation ------------------------------------------------------
   c <- list()
-  c$file_com <- "cd E:/Programy/Screaming Frog SEO Spider/
+
+  if (grepl("Windows", Sys.info()['sysname'])) {
+    c$file_com <- "cd E:/Programy/Screaming Frog SEO Spider/
   ScreamingFrogSEOSpiderCli.exe "
+  } else {
+    c$file_com <- "screamingfrogseospider "
+  }
+
 
   # commands preparation: url -------------------------------------------------
   if (length(url) > 1) {
