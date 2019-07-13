@@ -48,8 +48,7 @@ options are "csv", "xls" and "xlsx". Defaults to "csv". IMPORTANT:
 it only affects exported tabs, bulk exports and reports, so if you
 decide to save the crawl file, it will not be affected}
 
-\item{save_crawl_file}{logical. Should the files in output directory be
-overwritten? Defaults to FALSE}
+\item{save_crawl_file}{logical. Should the crawl file be saved? Defaults to FALSE}
 
 \item{overwrite}{logical. Should the files in the output folder be
 overwritten? Defaults to FALSE}
@@ -84,4 +83,13 @@ spreadsheet files in choosen directory with the reports and/or the
 \description{
 Function is a wrapper to Screaming Frog CLI program in
     versions 10+. It lets performing SEO crawl and exporting results.
+}
+\details{
+This package requires Screaming Frog version 10.0 or above.
+
+   Crawler requires accepting the EULA and some features need to be
+   activated by providing the license.
+
+   For more information, see:
+   https://www.screamingfrog.co.uk/seo-spider/user-guide/general/
 }

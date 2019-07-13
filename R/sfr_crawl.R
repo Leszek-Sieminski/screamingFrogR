@@ -31,8 +31,7 @@
 #'     options are "csv", "xls" and "xlsx". Defaults to "csv". IMPORTANT:
 #'     it only affects exported tabs, bulk exports and reports, so if you
 #'     decide to save the crawl file, it will not be affected
-#' @param save_crawl_file logical. Should the files in output directory be
-#'     overwritten? Defaults to FALSE
+#' @param save_crawl_file logical. Should the crawl file be saved? Defaults to FALSE
 #' @param overwrite logical. Should the files in the output folder be
 #'     overwritten? Defaults to FALSE
 #' @param headless logical. Should the crawler be run in silent mode without a
@@ -49,6 +48,14 @@
 #' @param use_google_analytics ??? Use Google Analytics API during crawl
 #' @param use_google_search_console ??? Use Google Search Console API during
 #'    crawl
+#'
+#' @details This package requires Screaming Frog version 10.0 or above.
+#'
+#'    Crawler requires accepting the EULA and some features need to be
+#'    activated by providing the license.
+#'
+#'    For more information, see:
+#'    https://www.screamingfrog.co.uk/seo-spider/user-guide/general/
 #'
 #' @import assertthat
 #'

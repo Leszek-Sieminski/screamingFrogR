@@ -8,11 +8,21 @@ sfr_setup_windows(path)
 }
 \arguments{
 \item{path}{the path to the folder of Screaming Frog. Usually similar to
-'C:/Program Files/Screaming Frog SEO Spider/'.}
+'C:/Program Files/Screaming Frog SEO Spider/'. It MUST contain the file
+'ScreamingFrogSEOSpiderCli.exe', otherwise it won't work}
 }
 \value{
-invisibly adds the folder to enviromental variable
+invisibly adds the folder path to enviromental variable
 }
 \description{
 Function to setup the Screaming Frog on Windows systems
+}
+\details{
+This package requires Screaming Frog version 10.0 or above.
+
+  Crawler requires accepting the EULA and some features need to be
+  activated by providing the license.
+
+  For more information, see:
+  https://www.screamingfrog.co.uk/seo-spider/user-guide/general/
 }
