@@ -1,4 +1,28 @@
-
+#' Title
+#'
+#' @param url
+#' @param output_folder
+#' @param timestamped_output
+#' @param format
+#' @param save_crawl_file
+#' @param export_tabs
+#' @param export_bulk
+#' @param export_report
+#' @param overwrite
+#' @param headless
+#' @param config
+#' @param create_sitemap
+#' @param create_images_sitemap
+#' @param use_majestic
+#' @param use_mozscape
+#' @param use_ahrefs
+#' @param use_google_analytics
+#' @param use_google_search_console
+#'
+#' @return
+#' @export
+#'
+#' @examples
 sfr_command <- function(
   url,
   output_folder             = NULL,

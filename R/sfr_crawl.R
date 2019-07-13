@@ -74,7 +74,7 @@ sfr_crawl <- function(
   # ScreamingFrogSEOSpiderCli.exe --crawl {url} --headless --output-folder {output}')
 
 
-  if (grepl("Windows", Sys.info()['sysname']) {
+  if (grepl("Windows", Sys.info()['sysname'])) {
     system2("cmd", input = command)
   } else {
     system(command)
