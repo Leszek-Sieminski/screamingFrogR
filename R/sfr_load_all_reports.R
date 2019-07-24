@@ -14,7 +14,7 @@
 sfr_load_all_reports <- function(output_path) {
 
   # csv -----------------------------------------------------------------------
-  filenames <- list.files(path = dir_path, pattern=".*csv")
+  filenames <- list.files(path = output_path, pattern=".*csv")
   names <- gsub(".csv", "", filenames, fixed = TRUE)
   for (name in names){
     filepath <- file.path(paste(output_path, "/", name, ".csv", sep = ""))
@@ -22,7 +22,7 @@ sfr_load_all_reports <- function(output_path) {
   }
 
   # xls -----------------------------------------------------------------------
-  filenames <- list.files(path = dir_path, pattern=".*xls")
+  filenames <- list.files(path = output_path, pattern=".*xls")
   names <- gsub(".xls", "", filenames, fixed = TRUE)
   for (name in names){
     filepath <- file.path(paste(output_path, "/", name, ".xls", sep = ""))
@@ -30,7 +30,7 @@ sfr_load_all_reports <- function(output_path) {
   }
 
   # xlsx ----------------------------------------------------------------------
-  filenames <- list.files(path = dir_path, pattern=".*xlsx")
+  filenames <- list.files(path = output_path, pattern=".*xlsx")
   names <- gsub(".xlsx", "", filenames, fixed = TRUE)
   for (name in names){
     filepath <- file.path(paste(output_path, "/", name, ".xlsx", sep = ""))

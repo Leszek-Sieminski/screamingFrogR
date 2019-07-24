@@ -1,0 +1,13 @@
+language: r
+cache: packages
+r_packages:
+  - covr
+r_github_packages:
+  - r-lib/covr
+
+script:
+  - R CMD build .
+  - R CMD check *tar.gz
+
+after_success:
+  - Rscript -e 'library(covr); covr::codecov()'
