@@ -56,7 +56,7 @@ save the file and exit.
 
 ## Using the package
 ### Download & Install
-````r
+```r
 install.packages(devtools)
 library(devtools)
 devtools::install_github("Leszek-Sieminski/screamingFrogR")
