@@ -30,18 +30,18 @@ Version 10.0 introduced Command Line Interface (CLI) that enables programmatic c
 Screaming Frog SEO Spider can be downloaded [here](https://www.screamingfrog.co.uk/seo-spider/) via a 'Download' button.
 If you happen to be installing it on a server (without GUI), remember to accept the EULA.
 
-## Installation
+## Installation of Screaming Frog SEO Spider
 ### Windows
-tbd
+Please read official documentation: [installation on Windows](https://www.screamingfrog.co.uk/seo-spider/user-guide/general/#installation-on-windows)
 
 ### Mac OS
-tbd
+Please read official documentation: [installation on Mac OS](https://www.screamingfrog.co.uk/seo-spider/user-guide/general/#installation-on-macos)
 
 ### Linux
-tbd
+Please read official documentation: [installation on Ubuntu](https://www.screamingfrog.co.uk/seo-spider/user-guide/general/#installation-on-ubuntu)
 
-### More info
-For more information, please read: [link](https://www.screamingfrog.co.uk/seo-spider/user-guide/general/#command-line)
+### Command line
+For more information about CLI, please read: [link](https://www.screamingfrog.co.uk/seo-spider/user-guide/general/#command-line)
 
 ## Setup
 ### 1. Entering you licence key
@@ -54,18 +54,28 @@ Create or edit the file spider.config in your .ScreamingFrogSEOSpider directory.
 
 save the file and exit.
 
-### 3. Run the setup function (Windows only)
+## Using the package
+### Download & Install
+````r
+install.packages(devtools)
+library(devtools)
+devtools::install_github("Leszek-Sieminski/screamingFrogR")
+library("screamingFrogR")
+```
+
+### Run the setup function (Windows only)
 Please use *sfr_setup_windows()* function to setup Screaming Frog SEO Spider properly. To do this, you must provide a path to the directory of installation. Proper directory MUST contain 'ScreamingFrogSEOSpiderCli.exe' file to work properly, otherwise it won't work:
 
 ```r
 sfr_setup_windows(path = "C:/Program Files/Screaming Frog SEO Spider/")
 ```
 
-## Usage
+## Crawling
 ```r
 # installation ----------------------------------------------------------------
 install.packages("devtools")
 devtools::install_github("Leszek-Sieminski/screamingFrogR")
+library("screamingFrogR")
 
 # setup (Windows only) --------------------------------------------------------
 screamingFrogR::sfr_setup_windows(path = "C:/Program Files/Screaming Frog SEO Spider/")
