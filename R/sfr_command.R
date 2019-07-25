@@ -79,7 +79,7 @@ sfr_command <- function(
     c$file_com <- "cd E:/Programy/Screaming Frog SEO Spider/
   ScreamingFrogSEOSpiderCli.exe "
   } else {
-    c$file_com <- "screamingfrogseospider "
+    c$file_com <- "unset DISPLAY; screamingfrogseospider "
   }
 
 
