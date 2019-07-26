@@ -1,4 +1,4 @@
-# screamingFrogR v0.1.0
+# screamingFrogR v0.1.1
 ![Lifecycle_Status](https://img.shields.io/badge/lifecycle-experimental-orange.svg)
 [![Build status](https://travis-ci.org/Leszek-Sieminski/screamingFrogR.svg?branch=master)](https://travis-ci.org/Leszek-Sieminski/screamingFrogR)
 [![codecov](https://codecov.io/gh/Leszek-Sieminski/screamingFrogR/branch/master/graph/badge.svg)](https://codecov.io/gh/Leszek-Sieminski/screamingFrogR)

@@ -1,7 +1,7 @@
 Package: screamingFrogR
 Type: Package
 Title: Automating 'Screaming Frog' CLI in R
-Version: 0.1.0
+Version: 0.1.1
 Author: Leszek Siemiński <auth, cre>
 Maintainer: Leszek Siemiński <leszek.sieminski@gmail.com>
 Description: R wrapper for Screaming Frog CLI SEO crawler.
