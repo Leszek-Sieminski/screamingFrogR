@@ -76,8 +76,10 @@ sfr_command <- function(
   c <- list()
 
   if (grepl("Windows", Sys.info()['sysname'])) {
-    c$file_com <- "cd E:/Programy/Screaming Frog SEO Spider/
-  ScreamingFrogSEOSpiderCli.exe "
+  #   c$file_com <- "cd E:/Programy/Screaming Frog SEO Spider/
+  # ScreamingFrogSEOSpiderCli.exe "
+    c$file_com <- paste0("cd ", Sys.getenv("S_FROG_PATH"), "\n",
+                         " ScreamingFrogSEOSpiderCli.exe ")
   } else {
     c$file_com <- "unset DISPLAY; screamingfrogseospider "
   }
